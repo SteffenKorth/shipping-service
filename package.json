@@ -4,8 +4,9 @@
   "description": "Cloud Developer Bootcamp\r 22345",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "test": "jest tests --env=node",
+    "start": "node src/app.js"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SteffenKorth/shipping-service.git"
