@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Today's Date</title>
+</head>
+
+<body>
+Here comes the result:
+    <p id="demo"></p>
+    <script>
+function fun() 
+{
+  var data="hello";
+  $.get('http://shipping-service-lab-cnb-1.cnb-barcelona-2020-4541c909052590f055286494a1af3e6a-0001.eu-gb.containers.appdomain.cloud/shipping?itemId=RRR&type=standard',{},function(response) 
+  {     data = response;
+  }).error(function(){
+  alert("Sorry could not proceed");
+});
+
+    return data;
+}
+
+
+function fun2() 
+{
+  var data="hello";
+  return data;
+}
+
+        document.getElementById("demo").innerHTML = fun();  
+
+</script>
+
+</body>
+</html>
