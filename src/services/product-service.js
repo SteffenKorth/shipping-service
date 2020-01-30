@@ -5,7 +5,7 @@ module.exports = {
   getProductWeight: async function (productId) {
     let URL = process.env['MICROS_PRODUCTS_URL'] || 'product.service:8899/products';
     
-    console.log(`Call to: https://${URL}/${productId}`);
+    console.log(`Call to 2: https://${URL}/${productId}`);
 
     return axios
       .get(`https://${URL}/${productId}`)
