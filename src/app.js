@@ -9,7 +9,7 @@ app.get('/*shipping', (request, response) => {
   ctrl
     .getItemShipping({id: request.query.itemId, type: request.query.type})
     .then(amount => {
-      response.send({ itemId: request.query.itemId, Amount: amount })
+      response.send({ Item-Id: request.query.itemId, Amount: amount })
     })
     .catch(error => {
       response.status(500).send({ error: error.message })
