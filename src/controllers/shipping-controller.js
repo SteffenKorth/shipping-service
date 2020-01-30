@@ -4,13 +4,13 @@ var productService = require('../services/product-service')
 class ShippingController {
 
   constructor() {
-    this.REGULAR_PRICE = 5
-    this.OVERNIGHT_PRICE = 30
+    this.REGULAR_PRICE = 0.1
+    this.OVERNIGHT_PRICE = 1
   }
 
   async getItemShipping(item) {
     var shippingAmount = await productService.getProductWeight(item.id)
-    console.log(`Shipping Amount: ${shippingAmount} ${item.type.toLowerCase()}`);
+    console.log(`Product Weight: ${shippingAmount}, Shipping Type: ${item.type.toLowerCase()}`);
     
     if (item.type.toLowerCase() === 'overnight') {
       return shippingAmount * this.OVERNIGHT_PRICE
